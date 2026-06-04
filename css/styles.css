@@ -16,11 +16,10 @@
     13.  Testimonios (#testimonios, .testimonio)
     14.  Footer
     15.  Enlaces en main
-    16.  Layout grid — index.html (.index-layout)
-    17.  Layout grid — faq.html (.faq-layout)
-    18.  Página de Precios (#content-precios, .planes, .plan)
-    19.  Sección Clientes (.Clientes)
-    20.  Responsive
+    16.  Layout grid — faq.html (.faq-layout)
+    17.  Página de Precios (#content-precios, .planes, .plan)
+    18.  Sección Clientes (.Clientes)
+    19.  Responsive
    ============================================ */
 
 
@@ -49,8 +48,8 @@
   --surface-border: rgba(0, 0, 0, 0.10);
   --nav-bg:         #1c1c1c;
   --nav-text:       #f5f3ee;
-  --accent:         #5b6e8c;
-  --accent-hover:   #3d4f68;
+  --accent:         #6d4bb5;
+  --accent-hover:   #4e3282;
   --muted:          #6b6860;
   --link-color:     #5b6e8c;
   --link-hover:     #3d4f68;
@@ -357,8 +356,19 @@ label {
   transition:     color var(--transition);
 }
 
+label:has(input[type="checkbox"]) {
+  display:       flex;
+  align-items:   center;
+  gap:           8px;
+  margin-bottom: 0;
+  cursor:        pointer;
+  color:         var(--text-color);
+  font-size:     14px;
+  justify-self:  start;
+}
+
 input,
-textarea {
+textarea,select {
   width:         100%;
   padding:       10px 14px;
   border:        1px solid var(--surface-border);
@@ -384,6 +394,11 @@ textarea:focus {
   outline:      none;
   border-color: var(--accent);
   box-shadow:   0 0 0 3px rgba(91, 110, 140, 0.18);
+}
+
+input[type="checkbox"] {
+  width:  auto;
+  flex-shrink: 0;
 }
 
 textarea {
@@ -667,7 +682,7 @@ main a:hover {
 
 
 /* ─────────────────────────────────────────────
-   17. LAYOUT GRID — faq.html
+   16. LAYOUT GRID — faq.html
    ───────────────────────────────────────────── */
 .faq-layout {
   display:               grid;
@@ -794,7 +809,7 @@ main a:hover {
 
 
 /* ─────────────────────────────────────────────
-   18. PÁGINA DE PRECIOS
+   17. PÁGINA DE PRECIOS
    ───────────────────────────────────────────── */
 #content-precios {
   text-align: center;
@@ -942,7 +957,7 @@ main a:hover {
 
 
 /* ─────────────────────────────────────────────
-   19. SECCIÓN CLIENTES
+   18. SECCIÓN CLIENTES
    ───────────────────────────────────────────── */
 .Clientes {
   padding:    2rem;
@@ -988,7 +1003,7 @@ main a:hover {
 
 
 /* ─────────────────────────────────────────────
-   20. RESPONSIVE
+   19. RESPONSIVE
    ───────────────────────────────────────────── */
 @media (min-width: 640px) {
   .galeria-item {
